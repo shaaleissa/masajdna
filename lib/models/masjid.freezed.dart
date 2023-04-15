@@ -17,6 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$Masjid {
   String get name => throw _privateConstructorUsedError;
+  String get imagePath => throw _privateConstructorUsedError;
   String get city => throw _privateConstructorUsedError;
   String get trawihTime => throw _privateConstructorUsedError;
   String? get qiyamTime => throw _privateConstructorUsedError;
@@ -33,6 +34,7 @@ abstract class $MasjidCopyWith<$Res> {
   @useResult
   $Res call(
       {String name,
+      String imagePath,
       String city,
       String trawihTime,
       String? qiyamTime,
@@ -53,6 +55,7 @@ class _$MasjidCopyWithImpl<$Res, $Val extends Masjid>
   @override
   $Res call({
     Object? name = null,
+    Object? imagePath = null,
     Object? city = null,
     Object? trawihTime = null,
     Object? qiyamTime = freezed,
@@ -62,6 +65,10 @@ class _$MasjidCopyWithImpl<$Res, $Val extends Masjid>
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      imagePath: null == imagePath
+          ? _value.imagePath
+          : imagePath // ignore: cast_nullable_to_non_nullable
               as String,
       city: null == city
           ? _value.city
@@ -91,6 +98,7 @@ abstract class _$$_MasjidCopyWith<$Res> implements $MasjidCopyWith<$Res> {
   @useResult
   $Res call(
       {String name,
+      String imagePath,
       String city,
       String trawihTime,
       String? qiyamTime,
@@ -108,6 +116,7 @@ class __$$_MasjidCopyWithImpl<$Res>
   @override
   $Res call({
     Object? name = null,
+    Object? imagePath = null,
     Object? city = null,
     Object? trawihTime = null,
     Object? qiyamTime = freezed,
@@ -117,6 +126,10 @@ class __$$_MasjidCopyWithImpl<$Res>
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      imagePath: null == imagePath
+          ? _value.imagePath
+          : imagePath // ignore: cast_nullable_to_non_nullable
               as String,
       city: null == city
           ? _value.city
@@ -143,6 +156,7 @@ class __$$_MasjidCopyWithImpl<$Res>
 class _$_Masjid implements _Masjid {
   const _$_Masjid(
       {required this.name,
+      required this.imagePath,
       required this.city,
       required this.trawihTime,
       this.qiyamTime,
@@ -150,6 +164,8 @@ class _$_Masjid implements _Masjid {
 
   @override
   final String name;
+  @override
+  final String imagePath;
   @override
   final String city;
   @override
@@ -161,7 +177,7 @@ class _$_Masjid implements _Masjid {
 
   @override
   String toString() {
-    return 'Masjid(name: $name, city: $city, trawihTime: $trawihTime, qiyamTime: $qiyamTime, location: $location)';
+    return 'Masjid(name: $name, imagePath: $imagePath, city: $city, trawihTime: $trawihTime, qiyamTime: $qiyamTime, location: $location)';
   }
 
   @override
@@ -170,6 +186,8 @@ class _$_Masjid implements _Masjid {
         (other.runtimeType == runtimeType &&
             other is _$_Masjid &&
             (identical(other.name, name) || other.name == name) &&
+            (identical(other.imagePath, imagePath) ||
+                other.imagePath == imagePath) &&
             (identical(other.city, city) || other.city == city) &&
             (identical(other.trawihTime, trawihTime) ||
                 other.trawihTime == trawihTime) &&
@@ -180,8 +198,8 @@ class _$_Masjid implements _Masjid {
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, name, city, trawihTime, qiyamTime, location);
+  int get hashCode => Object.hash(
+      runtimeType, name, imagePath, city, trawihTime, qiyamTime, location);
 
   @JsonKey(ignore: true)
   @override
@@ -193,6 +211,7 @@ class _$_Masjid implements _Masjid {
 abstract class _Masjid implements Masjid {
   const factory _Masjid(
       {required final String name,
+      required final String imagePath,
       required final String city,
       required final String trawihTime,
       final String? qiyamTime,
@@ -200,6 +219,8 @@ abstract class _Masjid implements Masjid {
 
   @override
   String get name;
+  @override
+  String get imagePath;
   @override
   String get city;
   @override

@@ -6,6 +6,7 @@ part 'masjid.freezed.dart';
 class Masjid with _$Masjid {
   const factory Masjid(
       {required String name,
+      required String imagePath,
       required String city,
       required String trawihTime,
       String? qiyamTime,
