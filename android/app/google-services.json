@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1058256587860",
+    "project_id": "masjadna",
+    "storage_bucket": "masjadna.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058256587860:android:6f1d65da6353ab201571c1",
+        "android_client_info": {
+          "package_name": "com.example.masajdna"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1058256587860-1ie9d9iv0l4r1spshbr4klset55vr8jk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxalIiEvTNmFW8kDHkR7mzsFLd3fA1jvQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1058256587860-1ie9d9iv0l4r1spshbr4klset55vr8jk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
