@@ -1,3 +1,3 @@
-class home {
+class HomeScreen {
   
 }
