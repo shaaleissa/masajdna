@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:masajdna/Screens/home_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:masajdna/auth/auth_checking.dart';
+import 'package:masajdna/constants/colors.dart';
 import 'package:masajdna/providers/auth_provider.dart';
 import 'firebase_options.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -31,6 +32,7 @@ class MyApp extends ConsumerWidget {
         textTheme: GoogleFonts.tajawalTextTheme(
           Theme.of(context).textTheme,
         ),
+        canvasColor: MyColors.white
       ),
       home: initialize.when(
         data: (data) => const AuthChecking(),

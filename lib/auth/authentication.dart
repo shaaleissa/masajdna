@@ -40,6 +40,9 @@ Future<void> signInWithGoogle(BuildContext context) async {
       );
     }
   }
+  Future<void> signInAsGuest(BuildContext context) async {
+    await _auth.signInAnonymously();
+  }
 
   Future<void> signOutGoogle() async {
     await _googleSignIn.signOut();

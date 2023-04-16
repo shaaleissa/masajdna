@@ -24,6 +24,12 @@ class Data {
       action: () {},
     ),
   ];
+
+
+
+
+
+  
   static const List<Masjid> masjidList = [
     Masjid(
         name: 'جامع سعيد الرداد',

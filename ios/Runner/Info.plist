@@ -48,23 +48,18 @@
 		<key>UIApplicationSupportsIndirectInputEvents</key>
 		<true/>
 		<!-- Put me in the [my_project]/ios/Runner/Info.plist file -->
-		<!-- Google Sign-in Section -->
-		<key>CFBundleURLTypes</key>
+<!-- Google Sign-in Section -->
+<key>CFBundleURLTypes</key>
+<array>
+	<dict>
+		<key>CFBundleTypeRole</key>
+		<string>Editor</string>
+		<key>CFBundleURLSchemes</key>
 		<array>
-			<dict>
-				<key>CFBundleTypeRole</key>
-				<string>Editor</string>
-				<key>CFBundleURLSchemes</key>
-				<array>
-					<!-- TODO Replace this value: -->
-					<!-- Copied from GoogleService-Info.plist key REVERSED_CLIENT_ID -->
-					<string>com.googleusercontent.apps.1058256587860-21uqlmm68pl84s7r68ifu4s6tu7bpfpu</string>
-				</array>
-			</dict>
+			<!-- TODO Replace this value: -->
+			<!-- Copied from GoogleService-Info.plist key REVERSED_CLIENT_ID -->
+			<string>com.googleusercontent.apps.1058256587860-21uqlmm68pl84s7r68ifu4s6tu7bpfpu</string>
 		</array>
-		<!-- End of the Google Sign-in Section -->
-		<key>UIStatusBarHidden</key>
-		<false/>
 	</dict>
 </array>
 <!-- End of the Google Sign-in Section -->
