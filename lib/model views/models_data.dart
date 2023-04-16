@@ -4,58 +4,27 @@ import 'package:masajdna/models/masjid.dart';
 class Data {
   static final List<Cards> cardList = [
     Cards(
-      imagePath: 'assets/1.png',
-      name: 'Card 1',
+      imagePath: 'https://assets6.lottiefiles.com/packages/lf20_zjvd0nnf.json',
+      name: 'اليوم',
       action: () {},
     ),
     Cards(
-      imagePath: 'assets/1.png',
-      name: 'Card 2',
+      imagePath: 'https://assets5.lottiefiles.com/private_files/lf30_7mp95dwr.json',
+      name: 'الوقت حتى الإفطار',
       action: () {},
     ),
     Cards(
-      imagePath: 'assets/1.png',
-      name: 'Card 3',
+      imagePath: 'https://assets7.lottiefiles.com/packages/lf20_dvik0gkn.json',
+      name: 'حالة الطقس',
       action: () {},
     ),
     Cards(
-      imagePath: 'assets/1.png',
-      name: 'Card 4',
+      imagePath: 'https://assets4.lottiefiles.com/private_files/lf30_2putscqk.json',
+      name: 'المفضلة',
       action: () {},
     ),
   ];
   static const List<Masjid> masjidList = [
-    Masjid(
-        name: 'مسجد المصطفى',
-        city: 'القطيف',
-        trawihTime: 'الساعة الثامنة مساءً',
-        location: 'googlemaps',
-        imagePath: 'assets/mustafa.jpg'),
-    Masjid(
-        name: 'مسجد الخضر',
-        city: 'القطيف',
-        trawihTime: 'الساعة الثامنة مساءً',
-        location: 'googlemaps',
-        imagePath: 'assets/alkuder.jpg'),
-    Masjid(
-        name: 'مسجد السيدة \n آمنة',
-        city: 'القطيف',
-        trawihTime: 'الساعة الثامنة مساءً',
-        location: 'googlemaps',
-        imagePath: 'assets/amana.jpg'),
-    Masjid(
-        name: 'مسجد الرسالة',
-        city: 'القطيف',
-        trawihTime: 'الساعة الثامنة مساءً',
-        location: 'googlemaps',
-        imagePath: 'assets/resalah.jpg'),
-    Masjid(
-        name: 'مسجد الحداد',
-        city: 'القطيف',
-        trawihTime: 'الساعة الثامنة مساءً',
-        location: 'googlemaps',
-        imagePath: 'assets/hadad.jpg'),
-
     Masjid(
         name: 'جامع سعيد الرداد',
         city: 'الدمام',

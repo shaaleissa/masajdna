@@ -13,3 +13,6 @@ final firebaseinitializerProvider = FutureProvider<FirebaseApp>((ref) async {
 final authStateProvider = StreamProvider<User?>((ref) {
   return ref.read(authenticationProvider).authStateChange;
 });
+final fireBaseAuthProvider = Provider<FirebaseAuth>((ref) {
+  return FirebaseAuth.instance;
+});
