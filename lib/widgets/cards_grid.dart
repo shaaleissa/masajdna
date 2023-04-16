@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:masajdna/models/cards.dart';
 
 class CardsGrid extends StatelessWidget {
@@ -35,11 +36,17 @@ class CardsGrid extends StatelessWidget {
                     ],
                   ),
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image.asset(cards[index * cols + j].imagePath,
-                          width: width, height: height),
-                      const SizedBox(height: 10),
-                      Text(cards[index * cols + j].name),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(cards[index * cols + j].name, style: const TextStyle(fontSize: 20),),
+                      ),
+                      Align(
+                        alignment: Alignment.bottomRight,
+                        child: Lottie.network(cards[index * cols + j].imagePath,
+                            width: width, height: height),
+                      ),
                     ],
                   ),
                 ),

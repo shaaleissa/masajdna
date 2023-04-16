@@ -6,45 +6,64 @@ import 'package:masajdna/model%20views/models_data.dart';
 import 'package:masajdna/providers/auth_provider.dart';
 import 'package:masajdna/screens/masjid_screen.dart';
 import 'package:masajdna/widgets/cards_grid.dart';
-
+// TO-DO The cards information
 class HomeScreen extends ConsumerWidget {
-  HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context,WidgetRef ref) {
-    final _auth = ref.watch(authenticationProvider);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final auth = ref.watch(authenticationProvider);
+    final data = ref.watch(fireBaseAuthProvider);
     return DefaultTabController(
       length: 4,
       child: Scaffold(
-        drawer: Drawer(
-          child: ListView(
-            padding: EdgeInsets.zero,
-            children: <Widget>[
-              const DrawerHeader(
-                decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 255, 235, 206),
+          drawer: Drawer(
+            child: ListView(
+              children: [
+                UserAccountsDrawerHeader(
+                  accountName: data.currentUser!.displayName != null
+                      ? Text(
+                          data.currentUser!.displayName!,
+                          style: GoogleFonts.tajawal(
+                              fontSize: 15,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w700),
+                        )
+                      : const Text(''),
+                  accountEmail: data.currentUser!.email != null
+                      ? Text(
+                          data.currentUser!.email!,
+                          style: GoogleFonts.tajawal(
+                              fontSize: 15,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w700),
+                        )
+                      : const Text(''),
+                  currentAccountPicture: data.currentUser!.photoURL != null
+                      ? CircleAvatar(
+                          backgroundImage:
+                              NetworkImage(data.currentUser!.photoURL!),
+                        )
+                      : const CircleAvatar(
+                          child: Icon(Icons.person),
+                        ),
+                  decoration: BoxDecoration(color: MyColors.paige),
                 ),
-                child: Text(
-                  'Drawer Header',
-                  style: TextStyle(
-                    color:  Color.fromARGB(255, 31, 74, 33),
-                    fontSize: 24,
-                  ),
-                ),
-              ),
-              ListTile(
-                leading: Icon(Icons.account_circle),
-                title: Text('Profile'),
-                onTap: () {
-                },
-              ),
-              ListTile(
-                leading: Icon(Icons.heart_broken),
-                title: Text('Favorites'),
-              ),
-            ],
+                ListTile(
+                    title: Text(
+                      'تسجيل الخروج',
+                      style: GoogleFonts.tajawal(
+                          fontSize: 15,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w700),
+                    ),
+                    onTap: () {
+                      // TO-DO: Sign out
+                      auth.signOutGoogle();
+                    }),
+              ],
+            ),
           ),
-        ),
           appBar: AppBar(
               backgroundColor: MyColors.white,
               foregroundColor: MyColors.orange,
@@ -55,30 +74,30 @@ class HomeScreen extends ConsumerWidget {
                   Text(
                     'الدمام',
                     style: GoogleFonts.tajawal(
-                      fontSize: 15,
-                      color: Colors.black,fontWeight: FontWeight.w700
-                    ),
+                        fontSize: 15,
+                        color: Colors.black,
+                        fontWeight: FontWeight.w700),
                   ),
                   Text(
                     'الخبر',
                     style: GoogleFonts.tajawal(
-                      fontSize: 15,
-                      color: Colors.black,fontWeight: FontWeight.w700
-                    ),
+                        fontSize: 15,
+                        color: Colors.black,
+                        fontWeight: FontWeight.w700),
                   ),
                   Text(
                     'الظهران',
                     style: GoogleFonts.tajawal(
-                      fontSize: 15,
-                      color: Colors.black,fontWeight: FontWeight.w700
-                    ),
+                        fontSize: 15,
+                        color: Colors.black,
+                        fontWeight: FontWeight.w700),
                   ),
                   Text(
                     'الجبيل',
                     style: GoogleFonts.tajawal(
-                      fontSize: 15,
-                      color: Colors.black,fontWeight: FontWeight.w700
-                    ),
+                        fontSize: 15,
+                        color: Colors.black,
+                        fontWeight: FontWeight.w700),
                   ),
                 ],
               )),
