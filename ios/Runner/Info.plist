@@ -63,5 +63,10 @@
 	</dict>
 </array>
 <!-- End of the Google Sign-in Section -->
+<key>LSApplicationQueriesSchemes</key>
+<array>
+  <string>sms</string>
+  <string>tel</string>
+</array>
 </dict>
 </plist>
