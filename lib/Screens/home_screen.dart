@@ -8,11 +8,11 @@ import 'package:masajdna/screens/masjid_screen.dart';
 import 'package:masajdna/widgets/cards_grid.dart';
 // TO-DO The cards information
 class HomeScreen extends ConsumerWidget {
-  HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final _auth = ref.watch(authenticationProvider);
+    final auth = ref.watch(authenticationProvider);
     final data = ref.watch(fireBaseAuthProvider);
     return DefaultTabController(
       length: 4,
@@ -59,7 +59,7 @@ class HomeScreen extends ConsumerWidget {
                     ),
                     onTap: () {
                       // TO-DO: Sign out
-                      _auth.signOutGoogle();
+                      auth.signOutGoogle();
                     }),
               ],
             ),

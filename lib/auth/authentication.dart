@@ -4,11 +4,13 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 class Authentication {
   FirebaseAuth _auth = FirebaseAuth.instance;
+  
   final GoogleSignIn _googleSignIn = GoogleSignIn();
 
   Stream<User?> get authStateChange => _auth.authStateChanges();
 
-  Future<void> signInWithGoogle(BuildContext context) async {
+Future<void> signInWithGoogle(BuildContext context) async {
+    
     final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
 
     final GoogleSignInAuthentication googleAuth =
@@ -25,14 +27,14 @@ class Authentication {
       await showDialog(
         context: context,
         builder: (ctx) => AlertDialog(
-          title: const Text('Error Occured'),
+          title: Text('Error Occured'),
           content: Text(e.toString()),
           actions: [
             TextButton(
                 onPressed: () {
                   Navigator.of(ctx).pop();
                 },
-                child: const Text("OK"))
+                child: Text("OK"))
           ],
         ),
       );
@@ -41,6 +43,6 @@ class Authentication {
 
   Future<void> signOutGoogle() async {
     await _googleSignIn.signOut();
-   
+    await _auth.signOut();
   }
 }
