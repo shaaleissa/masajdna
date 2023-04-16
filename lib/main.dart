@@ -16,7 +16,6 @@ void main() async {
     ));
 }
 
-// Maryam
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -26,7 +25,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        textTheme: GoogleFonts.latoTextTheme(
+        textTheme: GoogleFonts.tajawalTextTheme(
           Theme.of(context).textTheme,
         ),
       ),
