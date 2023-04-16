@@ -6,8 +6,6 @@ import 'package:masajdna/constants/colors.dart';
 import 'package:masajdna/providers/auth_provider.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-// hint meme use SvgPicture.asset('filePath') when using the picture
-// bc it's svg so Image.asset('filePath') won't work
 
 class LoginScreen extends ConsumerStatefulWidget {
   const LoginScreen({super.key});
