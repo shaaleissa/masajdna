@@ -74,13 +74,15 @@ class _MasjidScreenState extends ConsumerState<MasjidScreen> {
           ),
         ),
         floatingActionButton: FloatingActionButton(
+          backgroundColor: MyColors.paige,
+          foregroundColor: MyColors.orange,
           onPressed: () {
             Data.cardList[3] =
                 Data.cardList[3].copyWith(favorite: widget.obj.name);
             MasjidScreen.fav = Data.cardList[3].favorite;
             print(MasjidScreen.fav);
           },
-          child: const Icon(Icons.add),
+          child: const Icon(Icons.favorite),
         ));
   }
 }
