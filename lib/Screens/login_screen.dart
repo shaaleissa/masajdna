@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:masajdna/constants/colors.dart';
 import 'package:masajdna/providers/auth_provider.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:masajdna/widgets/loading_widget.dart';
 
 
 class LoginScreen extends ConsumerStatefulWidget {
@@ -53,12 +54,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
 
     return Container(
       child: _isLoading
-          ? Container(
-            decoration: BoxDecoration(
-                color: MyColors.paige,
-                borderRadius: BorderRadius.circular(20),
-              ),
-            child: const Center(child: CircularProgressIndicator()))
+          ? const Loading()
           : Center(
             child: Container(
               decoration: BoxDecoration(

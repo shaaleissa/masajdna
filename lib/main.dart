@@ -5,6 +5,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:masajdna/auth/auth_checking.dart';
 import 'package:masajdna/constants/colors.dart';
 import 'package:masajdna/providers/auth_provider.dart';
+import 'package:masajdna/widgets/loading_widget.dart';
 import 'firebase_options.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -37,7 +38,7 @@ class MyApp extends ConsumerWidget {
       ),
       home: initialize.when(
         data: (data) => const AuthChecking(),
-        loading: () => const Center(child: CircularProgressIndicator()),
+        loading: () => const Loading(),
         error: (e, s) => const Center(child: Text('Error')),
       ),
     );
