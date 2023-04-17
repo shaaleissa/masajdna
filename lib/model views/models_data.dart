@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:masajdna/models/cards.dart';
 import 'package:masajdna/models/masjid.dart';
 
@@ -6,30 +7,27 @@ class Data {
     Cards(
       imagePath: 'https://assets6.lottiefiles.com/packages/lf20_zjvd0nnf.json',
       name: 'اليوم',
-      action: () {},
+      favorite: ''
     ),
     Cards(
-      imagePath: 'https://assets5.lottiefiles.com/private_files/lf30_7mp95dwr.json',
+      imagePath:
+          'https://assets5.lottiefiles.com/private_files/lf30_7mp95dwr.json',
       name: 'الوقت حتى الإفطار',
-      action: () {},
+      favorite: ''
     ),
     Cards(
       imagePath: 'https://assets7.lottiefiles.com/packages/lf20_dvik0gkn.json',
       name: 'حالة الطقس',
-      action: () {},
+      favorite: ''
     ),
     Cards(
-      imagePath: 'https://assets4.lottiefiles.com/private_files/lf30_2putscqk.json',
+      imagePath:
+          'https://assets4.lottiefiles.com/private_files/lf30_2putscqk.json',
       name: 'المفضلة',
-      action: () {},
+      favorite: ''
     ),
   ];
 
-
-
-
-
-  
   static const List<Masjid> masjidList = [
     Masjid(
         name: 'جامع سعيد الرداد',
@@ -43,84 +41,83 @@ class Data {
         trawihTime: 'الساعة الثامنة مساءً',
         location: 'googlemaps',
         imagePath: 'assets/wabel.jpg'),
-        Masjid(
+    Masjid(
         name: 'جامع يوسف\n بن محمد\n آل بريك\n الدوسري',
         city: 'الدمام',
         trawihTime: 'الساعة الثامنة مساءً',
         location: 'googlemaps',
         imagePath: 'assets/yosuf.jpg'),
-        Masjid(
+    Masjid(
         name: 'مسجد أحمد العباد',
         city: 'الدمام',
         trawihTime: 'الساعة الثامنة مساءً',
         location: 'googlemaps',
         imagePath: 'assets/alabaad.jpg'),
-        Masjid(
+    Masjid(
         name: 'مسجد منيرة\n البراهيم المنصور',
         city: 'الدمام',
         trawihTime: 'الساعة الثامنة مساءً',
         location: 'googlemaps',
         imagePath: 'assets/muneera.jpg'),
-        Masjid(
+    Masjid(
         name: ' مسجد التقوى',
         city: 'الخبر',
         trawihTime: 'الساعة الثامنة مساءً',
         location: 'googlemaps',
         imagePath: 'assets/taqwa.jpg'),
-        Masjid(
+    Masjid(
         name: ' جامع الإمام \nالشافعي',
         city: 'الخبر',
         trawihTime: 'الساعة الثامنة مساءً',
         location: 'googlemaps',
         imagePath: 'assets/shfaii.jpg'),
-        Masjid(
+    Masjid(
         name: 'جامع الهداية',
         city: 'الخبر',
         trawihTime: 'الساعة الثامنة مساءً',
         location: 'googlemaps',
         imagePath: 'assets/hidaya.jpg'),
-        Masjid(
+    Masjid(
         name: 'جامع المدينة المنورة',
         city: 'الخبر',
         trawihTime: 'الساعة الثامنة مساءً',
         location: 'googlemaps',
         imagePath: 'assets/madina.jpg'),
-        Masjid(
+    Masjid(
         name: 'مسجد جوزاء القحطاني',
         city: 'الخبر',
         trawihTime: 'الساعة الثامنة مساءً',
         location: 'googlemaps',
         imagePath: 'assets/jawzaa.jpg'),
-        Masjid(
+    Masjid(
         name: 'مسجد الأنصار ',
         city: 'الظهران',
         trawihTime: 'الساعة الثامنة مساءً',
         location: 'googlemaps',
-        imagePath: 'assets/muneera.jpg'),
-        Masjid(
+        imagePath: 'assets/alansar.jpg'),
+    Masjid(
         name: 'مسجد أدينيس ',
         city: 'الظهران',
         trawihTime: 'الساعة الثامنة مساءً',
         location: 'googlemaps',
-        imagePath: 'assets/muneera.jpg'),
-        Masjid(
+        imagePath: 'assets/adinees.jpg'),
+    Masjid(
         name: 'جامع ابوبكر\n الصديق ',
         city: 'الظهران',
         trawihTime: 'الساعة الثامنة مساءً',
         location: 'googlemaps',
-        imagePath: 'assets/muneera.jpg'),
-        Masjid(
+        imagePath: 'assets/abubaker.jpg'),
+    Masjid(
         name: 'مسجد عثمان \nبن عفان',
         city: 'الظهران',
         trawihTime: 'الساعة الثامنة مساءً',
         location: 'googlemaps',
-        imagePath: 'assets/muneera.jpg'),
-        Masjid(
+        imagePath: 'assets/othman.jpg'),
+    Masjid(
         name: 'مسجد عبدالرحمن \n الشلوي\n رحمه الله',
         city: 'الظهران',
         trawihTime: 'الساعة الثامنة مساءً',
         location: 'googlemaps',
-        imagePath: 'assets/muneera.jpg'),
-
+        imagePath: 'assets/abdulrahman.jpg'),
   ];
 }

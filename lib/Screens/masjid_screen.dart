@@ -1,23 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:masajdna/constants/colors.dart';
+import 'package:masajdna/model%20views/models_data.dart';
 import 'package:masajdna/models/masjid.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class MasjidScreen extends StatefulWidget {
-  MasjidScreen({super.key, required this.obj});
+class MasjidScreen extends ConsumerStatefulWidget {
+  MasjidScreen({super.key, required this.obj, required String fav});
   Masjid obj;
+  static String fav='';
 
   @override
-  State<MasjidScreen> createState() => _MasjidScreenState();
+  ConsumerState<MasjidScreen> createState() => _MasjidScreenState();
 }
 
-class _MasjidScreenState extends State<MasjidScreen> {
+class _MasjidScreenState extends ConsumerState<MasjidScreen> {
   bool isQiyaam = false;
   void qiyaam() {
     setState(() {
       isQiyaam = !isQiyaam;
     });
+
+
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,50 +48,37 @@ class _MasjidScreenState extends State<MasjidScreen> {
                     color: MyColors.orange),
               ),
               const SizedBox(height: 9),
-              Text(widget.obj.city,
-                style: TextStyle(
-                    
-                    fontSize: 25,
-                    color: MyColors.lightGreen),
+              Text(
+                widget.obj.city,
+                style: TextStyle(fontSize: 25, color: MyColors.lightGreen),
               ),
               const SizedBox(height: 20),
               Text(
                 ":موعيد صلاة التراويح",
                 style: TextStyle(fontSize: 15, color: MyColors.lightGreen),
               ),
-                const SizedBox(height: 4),
+              const SizedBox(height: 4),
               Text(widget.obj.trawihTime),
-        
               const SizedBox(height: 20),
               Container(
-                child: isQiyaam ? const Text('لا يوجد صلاة قيام'): Text(
-                  ":موعد صلاة القيام",
-                  style: TextStyle(fontSize: 15, color: MyColors.lightGreen),
-                ),
+                child: isQiyaam
+                    ? const Text('لا يوجد صلاة قيام')
+                    : Text(
+                        ":موعد صلاة القيام",
+                        style:
+                            TextStyle(fontSize: 15, color: MyColors.lightGreen),
+                      ),
               ),
               const SizedBox(height: 4),
-        
             ],
-            
-              
-            
           ),
         ),
-        
-
-        
-
-
-
-        
         floatingActionButton: FloatingActionButton(
-          onPressed: () async {
-            final url = Uri.parse('https://goo.gl/maps/q4XyTGTMtTz2d7MM6');
-            if (await canLaunchUrl(url)) {
-              await launchUrl(url);
-            } else {
-              throw 'Could not launch $url';
-            }
+          onPressed: () {
+            Data.cardList[3] =
+                Data.cardList[3].copyWith(favorite: widget.obj.name);
+            MasjidScreen.fav = Data.cardList[3].favorite;
+            print(MasjidScreen.fav);
           },
           child: const Icon(Icons.add),
         ));

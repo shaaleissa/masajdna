@@ -18,7 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$Cards {
   String get imagePath => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  Function get action => throw _privateConstructorUsedError;
+  String get favorite => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $CardsCopyWith<Cards> get copyWith => throw _privateConstructorUsedError;
@@ -29,7 +29,7 @@ abstract class $CardsCopyWith<$Res> {
   factory $CardsCopyWith(Cards value, $Res Function(Cards) then) =
       _$CardsCopyWithImpl<$Res, Cards>;
   @useResult
-  $Res call({String imagePath, String name, Function action});
+  $Res call({String imagePath, String name, String favorite});
 }
 
 /// @nodoc
@@ -47,7 +47,7 @@ class _$CardsCopyWithImpl<$Res, $Val extends Cards>
   $Res call({
     Object? imagePath = null,
     Object? name = null,
-    Object? action = null,
+    Object? favorite = null,
   }) {
     return _then(_value.copyWith(
       imagePath: null == imagePath
@@ -58,10 +58,10 @@ class _$CardsCopyWithImpl<$Res, $Val extends Cards>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      action: null == action
-          ? _value.action
-          : action // ignore: cast_nullable_to_non_nullable
-              as Function,
+      favorite: null == favorite
+          ? _value.favorite
+          : favorite // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -72,7 +72,7 @@ abstract class _$$_CardsCopyWith<$Res> implements $CardsCopyWith<$Res> {
       __$$_CardsCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String imagePath, String name, Function action});
+  $Res call({String imagePath, String name, String favorite});
 }
 
 /// @nodoc
@@ -86,7 +86,7 @@ class __$$_CardsCopyWithImpl<$Res> extends _$CardsCopyWithImpl<$Res, _$_Cards>
   $Res call({
     Object? imagePath = null,
     Object? name = null,
-    Object? action = null,
+    Object? favorite = null,
   }) {
     return _then(_$_Cards(
       imagePath: null == imagePath
@@ -97,10 +97,10 @@ class __$$_CardsCopyWithImpl<$Res> extends _$CardsCopyWithImpl<$Res, _$_Cards>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      action: null == action
-          ? _value.action
-          : action // ignore: cast_nullable_to_non_nullable
-              as Function,
+      favorite: null == favorite
+          ? _value.favorite
+          : favorite // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -108,18 +108,19 @@ class __$$_CardsCopyWithImpl<$Res> extends _$CardsCopyWithImpl<$Res, _$_Cards>
 /// @nodoc
 
 class _$_Cards implements _Cards {
-  _$_Cards({required this.imagePath, required this.name, required this.action});
+  _$_Cards(
+      {required this.imagePath, required this.name, required this.favorite});
 
   @override
   final String imagePath;
   @override
   final String name;
   @override
-  final Function action;
+  final String favorite;
 
   @override
   String toString() {
-    return 'Cards(imagePath: $imagePath, name: $name, action: $action)';
+    return 'Cards(imagePath: $imagePath, name: $name, favorite: $favorite)';
   }
 
   @override
@@ -130,11 +131,12 @@ class _$_Cards implements _Cards {
             (identical(other.imagePath, imagePath) ||
                 other.imagePath == imagePath) &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.action, action) || other.action == action));
+            (identical(other.favorite, favorite) ||
+                other.favorite == favorite));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, imagePath, name, action);
+  int get hashCode => Object.hash(runtimeType, imagePath, name, favorite);
 
   @JsonKey(ignore: true)
   @override
@@ -147,14 +149,14 @@ abstract class _Cards implements Cards {
   factory _Cards(
       {required final String imagePath,
       required final String name,
-      required final Function action}) = _$_Cards;
+      required final String favorite}) = _$_Cards;
 
   @override
   String get imagePath;
   @override
   String get name;
   @override
-  Function get action;
+  String get favorite;
   @override
   @JsonKey(ignore: true)
   _$$_CardsCopyWith<_$_Cards> get copyWith =>
