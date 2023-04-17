@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:masajdna/models/cards.dart';
 import 'package:masajdna/models/masjid.dart';
 
@@ -31,30 +30,35 @@ class Data {
         name: 'جامع سعيد الرداد',
         city: 'الدمام',
         trawihTime: 'الساعة الثامنة مساءً',
+        qiyamTime: 'الساعة الواحدة صباحًا',
         location: 'googlemaps',
         imagePath: 'assets/radad.jpg'),
     Masjid(
         name: 'جامع الوابل',
         city: 'الدمام',
         trawihTime: 'الساعة الثامنة مساءً',
+        qiyamTime: 'الساعة الواحدة الا ربع صباحًا',
         location: 'googlemaps',
         imagePath: 'assets/wabel.jpg'),
     Masjid(
         name: 'جامع يوسف\n بن محمد\n آل بريك\n الدوسري',
         city: 'الدمام',
         trawihTime: 'الساعة الثامنة مساءً',
+        qiyamTime: 'الساعة الواحدة صباحًا',
         location: 'googlemaps',
         imagePath: 'assets/yosuf.jpg'),
     Masjid(
         name: 'مسجد أحمد العباد',
         city: 'الدمام',
         trawihTime: 'الساعة الثامنة مساءً',
+        qiyamTime: 'الساعة الواحدة و النصف صباحًا',
         location: 'googlemaps',
         imagePath: 'assets/alabaad.jpg'),
     Masjid(
         name: 'مسجد منيرة\n البراهيم المنصور',
         city: 'الدمام',
         trawihTime: 'الساعة الثامنة مساءً',
+        qiyamTime: 'الساعة الواحدة صباحًا',
         location: 'googlemaps',
         imagePath: 'assets/muneera.jpg'),
     Masjid(
@@ -67,6 +71,7 @@ class Data {
         name: ' جامع الإمام \nالشافعي',
         city: 'الخبر',
         trawihTime: 'الساعة الثامنة مساءً',
+        qiyamTime: 'الساعة الواحدة صباحًا',
         location: 'googlemaps',
         imagePath: 'assets/shfaii.jpg'),
     Masjid(

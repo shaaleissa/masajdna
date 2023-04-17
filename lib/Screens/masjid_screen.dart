@@ -8,7 +8,7 @@ import 'package:url_launcher/url_launcher.dart';
 class MasjidScreen extends ConsumerStatefulWidget {
   MasjidScreen({super.key, required this.obj, required String fav});
   Masjid obj;
-  static String fav='';
+  static String fav = '';
 
   @override
   ConsumerState<MasjidScreen> createState() => _MasjidScreenState();
@@ -20,8 +20,6 @@ class _MasjidScreenState extends ConsumerState<MasjidScreen> {
     setState(() {
       isQiyaam = !isQiyaam;
     });
-
-
   }
 
   @override
@@ -60,16 +58,12 @@ class _MasjidScreenState extends ConsumerState<MasjidScreen> {
               const SizedBox(height: 4),
               Text(widget.obj.trawihTime),
               const SizedBox(height: 20),
-              Container(
-                child: isQiyaam
-                    ? const Text('لا يوجد صلاة قيام')
-                    : Text(
-                        ":موعد صلاة القيام",
-                        style:
-                            TextStyle(fontSize: 15, color: MyColors.lightGreen),
-                      ),
+              Text(
+                ":موعد صلاة القيام",
+                style: TextStyle(fontSize: 15, color: MyColors.lightGreen),
               ),
               const SizedBox(height: 4),
+              Text(widget.obj.qiyamTime),
             ],
           ),
         ),
@@ -80,8 +74,19 @@ class _MasjidScreenState extends ConsumerState<MasjidScreen> {
             Data.cardList[3] =
                 Data.cardList[3].copyWith(favorite: widget.obj.name);
             MasjidScreen.fav = Data.cardList[3].favorite;
+            final snackBar = SnackBar(
+              content: Text('تم اضافة ${widget.obj.name} الى المفضلة'),
+              action: SnackBarAction(
+                label: 'نم',
+                onPressed: () {
+                },
+              ),
+            );
+            ScaffoldMessenger.of(context).showSnackBar(snackBar);
           },
           child: const Icon(Icons.favorite),
-        ));
+        )
+        
+        );
   }
 }

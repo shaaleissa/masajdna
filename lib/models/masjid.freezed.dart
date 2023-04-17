@@ -20,8 +20,8 @@ mixin _$Masjid {
   String get imagePath => throw _privateConstructorUsedError;
   String get city => throw _privateConstructorUsedError;
   String get trawihTime => throw _privateConstructorUsedError;
-  String? get qiyamTime => throw _privateConstructorUsedError;
   String get location => throw _privateConstructorUsedError;
+  String get qiyamTime => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $MasjidCopyWith<Masjid> get copyWith => throw _privateConstructorUsedError;
@@ -37,8 +37,8 @@ abstract class $MasjidCopyWith<$Res> {
       String imagePath,
       String city,
       String trawihTime,
-      String? qiyamTime,
-      String location});
+      String location,
+      String qiyamTime});
 }
 
 /// @nodoc
@@ -58,8 +58,8 @@ class _$MasjidCopyWithImpl<$Res, $Val extends Masjid>
     Object? imagePath = null,
     Object? city = null,
     Object? trawihTime = null,
-    Object? qiyamTime = freezed,
     Object? location = null,
+    Object? qiyamTime = null,
   }) {
     return _then(_value.copyWith(
       name: null == name
@@ -78,13 +78,13 @@ class _$MasjidCopyWithImpl<$Res, $Val extends Masjid>
           ? _value.trawihTime
           : trawihTime // ignore: cast_nullable_to_non_nullable
               as String,
-      qiyamTime: freezed == qiyamTime
-          ? _value.qiyamTime
-          : qiyamTime // ignore: cast_nullable_to_non_nullable
-              as String?,
       location: null == location
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
+              as String,
+      qiyamTime: null == qiyamTime
+          ? _value.qiyamTime
+          : qiyamTime // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
@@ -101,8 +101,8 @@ abstract class _$$_MasjidCopyWith<$Res> implements $MasjidCopyWith<$Res> {
       String imagePath,
       String city,
       String trawihTime,
-      String? qiyamTime,
-      String location});
+      String location,
+      String qiyamTime});
 }
 
 /// @nodoc
@@ -119,8 +119,8 @@ class __$$_MasjidCopyWithImpl<$Res>
     Object? imagePath = null,
     Object? city = null,
     Object? trawihTime = null,
-    Object? qiyamTime = freezed,
     Object? location = null,
+    Object? qiyamTime = null,
   }) {
     return _then(_$_Masjid(
       name: null == name
@@ -139,13 +139,13 @@ class __$$_MasjidCopyWithImpl<$Res>
           ? _value.trawihTime
           : trawihTime // ignore: cast_nullable_to_non_nullable
               as String,
-      qiyamTime: freezed == qiyamTime
-          ? _value.qiyamTime
-          : qiyamTime // ignore: cast_nullable_to_non_nullable
-              as String?,
       location: null == location
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
+              as String,
+      qiyamTime: null == qiyamTime
+          ? _value.qiyamTime
+          : qiyamTime // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -159,8 +159,8 @@ class _$_Masjid implements _Masjid {
       required this.imagePath,
       required this.city,
       required this.trawihTime,
-      this.qiyamTime,
-      required this.location});
+      required this.location,
+      this.qiyamTime = "لا يوجد"});
 
   @override
   final String name;
@@ -171,13 +171,14 @@ class _$_Masjid implements _Masjid {
   @override
   final String trawihTime;
   @override
-  final String? qiyamTime;
-  @override
   final String location;
+  @override
+  @JsonKey()
+  final String qiyamTime;
 
   @override
   String toString() {
-    return 'Masjid(name: $name, imagePath: $imagePath, city: $city, trawihTime: $trawihTime, qiyamTime: $qiyamTime, location: $location)';
+    return 'Masjid(name: $name, imagePath: $imagePath, city: $city, trawihTime: $trawihTime, location: $location, qiyamTime: $qiyamTime)';
   }
 
   @override
@@ -191,15 +192,15 @@ class _$_Masjid implements _Masjid {
             (identical(other.city, city) || other.city == city) &&
             (identical(other.trawihTime, trawihTime) ||
                 other.trawihTime == trawihTime) &&
-            (identical(other.qiyamTime, qiyamTime) ||
-                other.qiyamTime == qiyamTime) &&
             (identical(other.location, location) ||
-                other.location == location));
+                other.location == location) &&
+            (identical(other.qiyamTime, qiyamTime) ||
+                other.qiyamTime == qiyamTime));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, name, imagePath, city, trawihTime, qiyamTime, location);
+      runtimeType, name, imagePath, city, trawihTime, location, qiyamTime);
 
   @JsonKey(ignore: true)
   @override
@@ -214,8 +215,8 @@ abstract class _Masjid implements Masjid {
       required final String imagePath,
       required final String city,
       required final String trawihTime,
-      final String? qiyamTime,
-      required final String location}) = _$_Masjid;
+      required final String location,
+      final String qiyamTime}) = _$_Masjid;
 
   @override
   String get name;
@@ -226,9 +227,9 @@ abstract class _Masjid implements Masjid {
   @override
   String get trawihTime;
   @override
-  String? get qiyamTime;
-  @override
   String get location;
+  @override
+  String get qiyamTime;
   @override
   @JsonKey(ignore: true)
   _$$_MasjidCopyWith<_$_Masjid> get copyWith =>

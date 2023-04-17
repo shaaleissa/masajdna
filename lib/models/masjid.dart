@@ -5,10 +5,12 @@ part 'masjid.freezed.dart';
 @freezed
 class Masjid with _$Masjid {
   const factory Masjid(
-      {required String name,
+      {
+      required String name,
       required String imagePath,
       required String city,
       required String trawihTime,
-      String? qiyamTime,
-      required String location}) = _Masjid;
+      required String location,
+      @Default("لا يوجد") String qiyamTime,
+      }) = _Masjid;
 }
