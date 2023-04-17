@@ -53,7 +53,12 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
 
     return Container(
       child: _isLoading
-          ? const Center(child: CircularProgressIndicator())
+          ? Container(
+            decoration: BoxDecoration(
+                color: MyColors.paige,
+                borderRadius: BorderRadius.circular(20),
+              ),
+            child: const Center(child: CircularProgressIndicator()))
           : Center(
             child: Container(
               decoration: BoxDecoration(

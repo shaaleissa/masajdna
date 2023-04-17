@@ -54,7 +54,7 @@ class _MasjidScreenState extends ConsumerState<MasjidScreen> {
               ),
               const SizedBox(height: 20),
               Text(
-                ":موعيد صلاة التراويح",
+                ":موعد صلاة التراويح",
                 style: TextStyle(fontSize: 15, color: MyColors.lightGreen),
               ),
               const SizedBox(height: 4),

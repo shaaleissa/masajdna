@@ -5,27 +5,25 @@ import 'package:masajdna/models/masjid.dart';
 class Data {
   static final List<Cards> cardList = [
     Cards(
-      imagePath: 'https://assets6.lottiefiles.com/packages/lf20_zjvd0nnf.json',
-      name: 'اليوم',
-      favorite: ''
-    ),
+        imagePath:
+            'https://assets6.lottiefiles.com/packages/lf20_zjvd0nnf.json',
+        name: 'اليوم',
+        favorite: ''),
     Cards(
-      imagePath:
-          'https://assets5.lottiefiles.com/private_files/lf30_7mp95dwr.json',
-      name: 'الوقت حتى الإفطار',
-      favorite: ''
-    ),
+        imagePath:
+            'https://assets5.lottiefiles.com/private_files/lf30_7mp95dwr.json',
+        name: 'الوقت حتى الإفطار',
+        favorite: ''),
     Cards(
-      imagePath: 'https://assets7.lottiefiles.com/packages/lf20_dvik0gkn.json',
-      name: 'حالة الطقس',
-      favorite: ''
-    ),
+        imagePath:
+            'https://assets7.lottiefiles.com/packages/lf20_dvik0gkn.json',
+        name: 'حالة الطقس',
+        favorite: ''),
     Cards(
-      imagePath:
-          'https://assets4.lottiefiles.com/private_files/lf30_2putscqk.json',
-      name: 'المفضلة',
-      favorite: ''
-    ),
+        imagePath:
+            'https://assets4.lottiefiles.com/private_files/lf30_2putscqk.json',
+        name: 'المفضلة',
+        favorite: ''),
   ];
 
   static const List<Masjid> masjidList = [
@@ -84,7 +82,7 @@ class Data {
         location: 'googlemaps',
         imagePath: 'assets/madina.jpg'),
     Masjid(
-        name: 'مسجد جوزاء القحطاني',
+        name: 'مسجد جوزاء\n القحطاني',
         city: 'الخبر',
         trawihTime: 'الساعة الثامنة مساءً',
         location: 'googlemaps',
@@ -102,13 +100,13 @@ class Data {
         location: 'googlemaps',
         imagePath: 'assets/adinees.jpg'),
     Masjid(
-        name: 'جامع ابوبكر\n الصديق ',
+        name: 'جامع ابوبكر الصديق ',
         city: 'الظهران',
         trawihTime: 'الساعة الثامنة مساءً',
         location: 'googlemaps',
         imagePath: 'assets/abubaker.jpg'),
     Masjid(
-        name: 'مسجد عثمان \nبن عفان',
+        name: 'مسجد عثمان بن عفان',
         city: 'الظهران',
         trawihTime: 'الساعة الثامنة مساءً',
         location: 'googlemaps',
@@ -119,5 +117,35 @@ class Data {
         trawihTime: 'الساعة الثامنة مساءً',
         location: 'googlemaps',
         imagePath: 'assets/abdulrahman.jpg'),
+    Masjid(
+        name: 'مسجد كلية\nالجبيل الصناعية ',
+        city: 'الجبيل',
+        trawihTime: 'الساعة الثامنة مساءً',
+        location: 'googlemaps',
+        imagePath: 'assets/college.jpg'),
+    Masjid(
+        name: 'مسجد أنس بن\nمالك ',
+        city: 'الجبيل',
+        trawihTime: 'الساعة الثامنة مساءً',
+        location: 'googlemaps',
+        imagePath: 'assets/anasb.jpg'),
+    Masjid(
+        name: 'مسجد حديقة\nالجبيل الصناعية ',
+        city: 'الجبيل',
+        trawihTime: 'الساعة الثامنة مساءً',
+        location: 'googlemaps',
+        imagePath: 'assets/garden.jpg'),
+    Masjid(
+        name: 'مسجد عمر بن\nعبدالعزيز ',
+        city: 'الجبيل',
+        trawihTime: 'الساعة الثامنة مساءً',
+        location: 'googlemaps',
+        imagePath: 'assets/omar.jpg'),
+    Masjid(
+        name: 'مسجد أبوحمود ',
+        city: 'الجبيل',
+        trawihTime: 'الساعة الثامنة مساءً',
+        location: 'googlemaps',
+        imagePath: 'assets/abuh.jpg'),
   ];
 }

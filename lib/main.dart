@@ -26,6 +26,7 @@ class MyApp extends ConsumerWidget {
   Widget build(BuildContext context,WidgetRef ref) {
     final initialize = ref.watch(firebaseinitializerProvider);
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter',
       theme: ThemeData(
         primarySwatch: Colors.blue,

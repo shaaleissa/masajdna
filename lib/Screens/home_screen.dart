@@ -7,6 +7,7 @@ import 'package:masajdna/providers/auth_provider.dart';
 import 'package:masajdna/screens/masjid_screen.dart';
 import 'package:masajdna/widgets/cards_grid.dart';
 import 'package:liquid_pull_to_refresh/liquid_pull_to_refresh.dart';
+
 // TO-DO The cards information
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -133,7 +134,7 @@ class HomeScreen extends ConsumerWidget {
                 cards: Data.cardList),
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.all(20),
+                padding: const EdgeInsets.all(10),
                 child: Row(
                   children: [
                     Expanded(
@@ -164,9 +165,7 @@ class HomeScreen extends ConsumerWidget {
                                       Navigator.push(context,
                                           MaterialPageRoute(builder: (context) {
                                         return MasjidScreen(
-                                          obj: Data.masjidList[i],
-                                          fav: ''
-                                        );
+                                            obj: Data.masjidList[i], fav: '');
                                       }));
                                     },
                                     child: ClipRRect(
@@ -183,6 +182,9 @@ class HomeScreen extends ConsumerWidget {
                                   ),
                                   const SizedBox(width: 40),
                                   Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Text(
                                         Data.masjidList[i].name,
@@ -190,20 +192,20 @@ class HomeScreen extends ConsumerWidget {
                                         maxLines: 3,
                                         style: const TextStyle(
                                             fontWeight: FontWeight.bold,
-                                            fontSize: 15),
+                                            fontSize: 20),
                                       ),
                                       Text(
                                         Data.masjidList[i].city,
                                         overflow: TextOverflow.ellipsis,
                                       ),
-                                      Text(
-                                        Data.masjidList[i].trawihTime,
-                                        overflow: TextOverflow.ellipsis,
-                                      ),
-                                      Text(
-                                        Data.masjidList[i].trawihTime,
-                                        overflow: TextOverflow.ellipsis,
-                                      ),
+                                      // Text(
+                                      //   Data.masjidList[i].trawihTime,
+                                      //   overflow: TextOverflow.ellipsis,
+                                      // ),
+                                      // Text(
+                                      //   Data.masjidList[i].trawihTime,
+                                      //   overflow: TextOverflow.ellipsis,
+                                      // ),
                                     ],
                                   ),
                                 ],
