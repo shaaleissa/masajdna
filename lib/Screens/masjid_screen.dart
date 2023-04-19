@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:masajdna/constants/colors.dart';
 import 'package:masajdna/model%20views/models_data.dart';
 import 'package:masajdna/models/masjid.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class MasjidScreen extends ConsumerStatefulWidget {
   MasjidScreen({super.key, required this.obj, required String fav});
@@ -15,12 +14,6 @@ class MasjidScreen extends ConsumerStatefulWidget {
 }
 
 class _MasjidScreenState extends ConsumerState<MasjidScreen> {
-  bool isQiyaam = false;
-  void qiyaam() {
-    setState(() {
-      isQiyaam = !isQiyaam;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
